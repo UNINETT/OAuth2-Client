@@ -106,7 +106,8 @@ class OAuth2 {
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-		if ($header){
+		curl_setopt($curl, CURLOPT_USERAGENT, 'OAuth2 Client (https://github.com/kasperrt/OAuth2-Client)');
+        if ($header){
 			curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
 		}
 		if ($extended) {
