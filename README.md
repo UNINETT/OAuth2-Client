@@ -15,7 +15,8 @@ To use this general OAuth2 client-class, include it with
 		"session" 			 => $session,
 		"verify" 			 => $verify,
 		"grant_type" 		 => $grant_type,
-		"response_type" 	 => $response_type
+		"response_type" 	 => $response_type,
+		"scope" 	  	  	 => $scope
 	]);
 ```
 
@@ -32,6 +33,7 @@ Optional -
 ```(boolean) $verify``` is whether to verify SSL of host and peer, defaults to true  
 ```(string) $grant_type``` defaults to 'authorization_code'  
 ```(string) $response_type``` defaults to "code"  
+```(string) $scope``` defaults to ""  
 
 
 To start the redirect phase  
