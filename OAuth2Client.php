@@ -41,7 +41,7 @@ class OAuth2 {
 			$state = htmlspecialchars($_GET['state']);
 		}
 		if(!$code) {
-			$state = htmlspecialchars($_GET['code']);
+			$code = htmlspecialchars($_GET['code']);
 		}
 		if($this->session && $state) {
 			if($_SESSION['state'] != $state) {
